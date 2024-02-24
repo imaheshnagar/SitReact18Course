@@ -6,12 +6,18 @@ class CounterClass extends Component {
   };
 
   increment = () => {
-    let c = this.state.counter;
-    c++;
-
-    this.setState((prevState, props) => {
-      return { counter: c };
+    // way1
+    this.setState((prevState: { counter: number }, props) => {
+      return { counter: prevState.counter + 1 };
     });
+    // way2
+    // let c = this.state.counter;
+    // c++;
+    // this.setState((prevState: { counter: number }, props) => {
+    //   return { counter: c };
+    // });
+    // way3
+    // this.setState({ counter: this.state.counter + 1 });
   };
 
   decrement = () => {
