@@ -7,6 +7,7 @@ import CounterwithObjLitral from "./Components/counterwithObjLitral";
 import CounterClass from "./Components/ClassComponent/counterwithClassState";
 import Greeting from "./Components/ClassComponent/Greeting";
 import CounterWithProps from "./Components/ClassComponent/CounterWithProps";
+import DigitalClock from "./Components/digitalClock";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
        */}
       {/* <CounterClass></CounterClass> */}
       {/* <Greeting name="John" /> */}
-      <CounterWithProps name="Mahesh" />
+      {/* <CounterWithProps name="Mahesh" /> */}
+      {/* <DigitalClock /> */}
     </div>
   );
 }
