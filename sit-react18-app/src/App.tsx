@@ -10,6 +10,11 @@ import CounterWithProps from "./Components/ClassComponent/CounterWithProps";
 import DigitalClock from "./Components/digitalClock";
 import FruitList from "./fruitsMap";
 import EventsComponent from "./events";
+import EventsPreventDefaults from "./EventsPreventDefaults";
+import Login from "./Login";
+import FormsWithMultipleState from "./Components/FormsWithMultipleState";
+import FormsWithCombineState from "./Components/FormsWithCombineState";
+import FormsWithRadioButtonAndCheckBox from "./Components/FormsWithRadioButtonAndCheckBox";
 
 function App() {
   return (
@@ -24,7 +29,11 @@ function App() {
       {/* <CounterWithProps name="Mahesh" /> */}
       {/* <DigitalClock /> */}
       {/* <FruitList /> */}
-      <EventsComponent />
+      {/* <EventsComponent /> */}
+      {/* <EventsPreventDefaults /> */}
+      {/* <Login /> */}
+      {/* <FormsWithCombineState /> */}
+      <FormsWithRadioButtonAndCheckBox />
     </div>
   );
 }
