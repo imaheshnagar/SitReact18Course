@@ -3,7 +3,7 @@ import "./App.css";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import ProductList from "./Components/ProductList";
 import ProductDetails from "./Components/ProductDetails";
 import NotFound from "./Components/NotFound";
@@ -13,24 +13,24 @@ function App() {
     <div className="App">
       <ul>
         <li>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/about" style={{ textDecoration: "none" }}>
+          <NavLink to="/about" style={{ textDecoration: "none" }}>
             About
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact" style={{ textDecoration: "none" }}>
+          <NavLink to="/contact" style={{ textDecoration: "none" }}>
             Contact
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/ProductList" style={{ textDecoration: "none" }}>
+          <NavLink to="/ProductList" style={{ textDecoration: "none" }}>
             Products
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <hr></hr>
