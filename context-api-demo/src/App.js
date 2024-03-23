@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-
+import Cart from "./Components/cart";
+import Total from "./Components/total";
 function App() {
   const products = [
     { pName: "Apple", price: 20 },
@@ -8,13 +9,13 @@ function App() {
     { pName: "Orange", price: 10 },
     { pName: "Grapes", price: 8 },
   ];
-  const [cart, setProducts] = useState([]);
+  const [cartdata, setProducts] = useState([]);
   const [total, setTotal] = useState(0);
 
   let handleProdChange = (e) => {
     let pName = e.target.options[e.target.selectedIndex].text;
     let price = e.target.value;
-    let tCart = [...cart];
+    let tCart = [...cartdata];
     let obj = { pName, price };
     let tPrice = parseInt(price);
     tPrice = total + tPrice;
@@ -39,20 +40,8 @@ function App() {
           })}
         </select>
       </div>
-      <div className="customDiv">
-        <h3>Cart Component</h3>
-        <hr />
-        <ul>
-          {cart.map((product, index) => {
-            return <li key={index}>{product.pName} </li>;
-          })}
-        </ul>
-      </div>
-      <div className="customDiv">
-        <h3>Total Component</h3>
-        <hr />
-        <h2>Total : {total}</h2>
-      </div>
+      <Cart cartdata={cartdata}></Cart>
+      <Total total={total}></Total>
     </div>
   );
 }
