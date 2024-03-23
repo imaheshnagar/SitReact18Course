@@ -12,6 +12,7 @@ const ProductBox = ({ product }) => {
     <div>
       <h2>
         <Link
+          state={{ product }}
           to={"/ProductList/" + product.id}
           style={{ textDecoration: "none" }}
         >
