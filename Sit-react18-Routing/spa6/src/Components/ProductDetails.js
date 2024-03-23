@@ -1,9 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useOutletContext, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
-
+  const data = useOutletContext();
+  console.log(data);
   // Use the id to fetch the product details from your data source
 
   return (
