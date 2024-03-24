@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Cart from "./Components/cart";
 import Total from "./Components/total";
+import TotalContext from "./store/total-context";
 function App() {
   const products = [
     { pName: "Apple", price: 20 },
@@ -40,8 +41,11 @@ function App() {
           })}
         </select>
       </div>
-      <Cart cartdata={cartdata}></Cart>
-      <Total total={total}></Total>
+
+      <TotalContext.Provider value={total}>
+        <Cart cartdata={cartdata}></Cart>
+        <Total />
+      </TotalContext.Provider>
     </div>
   );
 }
