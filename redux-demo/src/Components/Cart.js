@@ -1,7 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const cartProducts = [];
+  const cartProducts = useSelector((state) => state.cart);
 
   const onDelete = (index) => {};
 

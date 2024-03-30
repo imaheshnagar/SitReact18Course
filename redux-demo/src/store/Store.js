@@ -7,8 +7,8 @@ const initialData = {
     { id: 3, name: "Mango", price: 30 },
     { id: 4, name: "Grapes", price: 34 },
   ],
-  cart: [],
-  total: 0,
+  cart: [{ id: 1, name: "Apple", price: 10 }],
+  total: 10,
 };
 
 const reducer = (state = initialData, action) => {
