@@ -8,8 +8,6 @@ const Purchase = () => {
     const id = e.target.options[e.target.selectedIndex].id;
     const name = e.target.options[e.target.selectedIndex].text;
     const price = e.target.value;
-    console.log(e.target.value);
-    console.log("Event Handler Called", { id, name, price });
     dispatch({ type: "Add_To_Cart", payload: { id, name, price } });
   };
 

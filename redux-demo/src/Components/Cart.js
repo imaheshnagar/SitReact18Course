@@ -17,8 +17,8 @@ const Cart = () => {
     <div>
       <h2>Cart Component</h2>
       <hr></hr>
-      {cartProducts.map((product) => (
-        <span key={product.id}>
+      {cartProducts.map((product, index) => (
+        <span key={index}>
           <p>{product.id}</p>
           <p>{product.name}</p>
           <button onClick={() => onDelete(product.id)}>Delete</button>
