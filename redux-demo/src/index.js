@@ -4,7 +4,24 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import store from "./store/Store";
+// import store from "./store/Store";
+import { configureStore } from "@reduxjs/toolkit";
+import LoginReducer from "./store/LoginSlice";
+import ProductReducer from "./store/ProductSlice";
+
+// const store = configureStore({
+//   reducer: {
+//     pr: ProductReducer,
+//     lr: LoginReducer,
+//   },
+// });
+
+const store = configureStore({
+  reducer: {
+    pr: ProductReducer,
+    lr: LoginReducer,
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
