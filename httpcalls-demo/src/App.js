@@ -3,6 +3,7 @@ import "./App.css";
 import React, { useState } from "react"; // Import useState from react
 import User from "./Components/User";
 import TodoList from "./Components/TodoList";
+import AddToDo from "./Components/AddToDo";
 
 function App() {
   const [isUsers, setIsUsers] = useState(false); // [state, setState]
@@ -49,6 +50,7 @@ function App() {
       ) : (
         <TodoList todoListData={todoListData} />
       )}
+      <AddToDo></AddToDo>
     </div>
   );
 }
