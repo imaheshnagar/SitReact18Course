@@ -5,6 +5,7 @@ import User from "./Components/User";
 import TodoList from "./Components/TodoList";
 
 function App() {
+  const [isUsers, setIsUsers] = useState(false); // [state, setState]
   const [usersData, setUsers] = useState([]); // [state, setState]
   const [todoListData, setTodoList] = useState([]); // [state, setState]
 
@@ -14,7 +15,7 @@ function App() {
       .then((data) => {
         console.log(data);
         setUsers(data);
-        setTodoList([]);
+        setIsUsers(true);
         // Handle the data here
       })
       .catch((error) => {
@@ -28,7 +29,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setTodoList(data);
-        setUsers([]);
+        setIsUsers(false);
         console.log(data);
         // Handle the data here
       })
@@ -43,8 +44,11 @@ function App() {
       <h1>React App</h1>
       <button onClick={users}>Users</button>
       <button onClick={todolist}>Todo List</button>
-      <User usersData={usersData} />
-      <TodoList todoListData={todoListData} />
+      {isUsers ? (
+        <User usersData={usersData} />
+      ) : (
+        <TodoList todoListData={todoListData} />
+      )}
     </div>
   );
 }
