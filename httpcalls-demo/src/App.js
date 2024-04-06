@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react"; // Import useState from react
 import User from "./Components/User";
+import TodoList from "./Components/TodoList";
 
 function App() {
   const [usersData, setUsers] = useState([]); // [state, setState]
@@ -43,14 +44,7 @@ function App() {
       <button onClick={users}>Users</button>
       <button onClick={todolist}>Todo List</button>
       <User usersData={usersData} />
-      <div>
-        {todoListData.map((todo) => (
-          <div key={todo.id}>
-            <h3>{todo.title}</h3>
-            <p>{todo.description}</p>
-          </div>
-        ))}
-      </div>
+      <TodoList todoListData={todoListData} />
     </div>
   );
 }
