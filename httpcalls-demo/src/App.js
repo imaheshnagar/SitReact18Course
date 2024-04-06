@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react"; // Import useState from react
+import User from "./Components/User";
 
 function App() {
   const [usersData, setUsers] = useState([]); // [state, setState]
@@ -41,18 +42,7 @@ function App() {
       <h1>React App</h1>
       <button onClick={users}>Users</button>
       <button onClick={todolist}>Todo List</button>
-      <div>
-        {usersData.map(
-          (
-            user // Remove the '@' symbol
-          ) => (
-            <div key={user.id}>
-              <h3>{user.name}</h3>
-              <p>{user.email}</p>
-            </div>
-          )
-        )}
-      </div>
+      <User usersData={usersData} />
       <div>
         {todoListData.map((todo) => (
           <div key={todo.id}>
